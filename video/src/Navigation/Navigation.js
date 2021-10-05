@@ -1,9 +1,10 @@
 import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome';
-import Peliculas from '../Screens/peliculas';
-import Series from '../Screens/series';
-import Proximamente from '../Screens/proximamente';
+import PeliculasStack from './PeliculasStack';
+import SeriesStack from './SeriesStack';
+import ProximamenteStack from './ProximamenteStack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+
 const Tab = createBottomTabNavigator();
 export default function Navigation() {
   return (
@@ -26,13 +27,17 @@ export default function Navigation() {
       })}>
       <Tab.Screen
         name="peli"
-        component={Peliculas}
+        component={PeliculasStack}
         options={{title: 'Peliculas'}}
       />
-      <Tab.Screen name="serie" component={Series} options={{title: 'Series'}} />
+      <Tab.Screen
+        name="serie"
+        component={SeriesStack}
+        options={{title: 'Series'}}
+      />
       <Tab.Screen
         name="proximo"
-        component={Proximamente}
+        component={ProximamenteStack}
         options={{title: 'Proximamente'}}
       />
     </Tab.Navigator>
