@@ -1,10 +1,10 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-export default function Series() {
+export default function Proximamente() {
   return (
     <View>
-      <Text style={styles.titleText}>En Series</Text>
+      <Text style={styles.titleText}>En Proximamente</Text>
     </View>
   );
 }
