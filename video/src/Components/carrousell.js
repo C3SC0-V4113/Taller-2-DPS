@@ -10,56 +10,59 @@ import {
   Pressable,
   TouchableHighlight,
 } from 'react-native';
+import {Card, ListItem, Button, Icon} from 'react-native-elements';
 
 const Carrousell = () => {
   return (
-    <View style={styles.contenedor}>
-      <Text style={styles.titulo}>Que hacer en El Salvador</Text>
-      <ScrollView horizontal>
-        <View>
-          <TouchableHighlight>
+    <Card containerStyle={{padding: 0}}>
+      <View style={styles.contenedor}>
+        <Text style={styles.titulo}>Que hacer en El Salvador</Text>
+        <ScrollView horizontal>
+          <View>
+            <TouchableHighlight>
+              <Image
+                style={styles.ciudad}
+                source={{
+                  uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
+                }}
+              />
+            </TouchableHighlight>
+          </View>
+          <View>
             <Image
               style={styles.ciudad}
               source={{
                 uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
               }}
             />
-          </TouchableHighlight>
-        </View>
-        <View>
-          <Image
-            style={styles.ciudad}
-            source={{
-              uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-            }}
-          />
-        </View>
-        <View>
-          <Image
-            style={styles.ciudad}
-            source={{
-              uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-            }}
-          />
-        </View>
-        <View>
-          <Image
-            style={styles.ciudad}
-            source={{
-              uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-            }}
-          />
-        </View>
-        <View>
-          <Image
-            style={styles.ciudad}
-            source={{
-              uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-            }}
-          />
-        </View>
-      </ScrollView>
-    </View>
+          </View>
+          <View>
+            <Image
+              style={styles.ciudad}
+              source={{
+                uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
+              }}
+            />
+          </View>
+          <View>
+            <Image
+              style={styles.ciudad}
+              source={{
+                uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
+              }}
+            />
+          </View>
+          <View>
+            <Image
+              style={styles.ciudad}
+              source={{
+                uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
+              }}
+            />
+          </View>
+        </ScrollView>
+      </View>
+    </Card>
   );
 };
 
