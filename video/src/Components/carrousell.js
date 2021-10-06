@@ -1,65 +1,25 @@
-import React, {useState} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  Alert,
-  Modal,
-  ScrollView,
-  StyleSheet,
-  Pressable,
-  TouchableHighlight,
-} from 'react-native';
-import {Card, ListItem, Button, Icon} from 'react-native-elements';
+import React from 'react';
+import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
+import {Card} from 'react-native-elements';
 
-const Carrousell = () => {
+const Carrousell = ({titulo, arreglo}) => {
   return (
     <Card containerStyle={{padding: 0}}>
       <View style={styles.contenedor}>
-        <Text style={styles.titulo}>Que hacer en El Salvador</Text>
+        <Text style={styles.titulo}>{titulo}</Text>
         <ScrollView horizontal>
-          <View>
-            <TouchableHighlight>
-              <Image
-                style={styles.ciudad}
-                source={{
-                  uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-                }}
-              />
-            </TouchableHighlight>
-          </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={{
-                uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-              }}
-            />
-          </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={{
-                uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-              }}
-            />
-          </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={{
-                uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-              }}
-            />
-          </View>
-          <View>
-            <Image
-              style={styles.ciudad}
-              source={{
-                uri: 'https://cinescopia.com/wp-content/uploads/2016/01/hateful-eight-banner-what.jpg',
-              }}
-            />
-          </View>
+          {arreglo.map((l, i) => {
+            return (
+              <View key={i}>
+                <Image
+                  style={styles.ciudad}
+                  source={{
+                    uri: l.poster,
+                  }}
+                />
+              </View>
+            );
+          })}
         </ScrollView>
       </View>
     </Card>
