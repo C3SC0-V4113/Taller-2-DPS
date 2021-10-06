@@ -1,21 +1,25 @@
 import React from 'react';
 import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
-import {Card,Avatar,ListItem} from 'react-native-elements';
+import {Card, Avatar, ListItem} from 'react-native-elements';
 
-const List = ({titulo,arreglo}) => {
+const List = ({titulo, arreglo}) => {
   return (
     <Card>
       <Card.Title>{titulo}</Card.Title>
       <Card.Divider />
       {arreglo.map((u, i) => {
         return (
-      <ListItem key={i} bottomDivider>
-        <Avatar   containerStyle={{flex: 0.35,height:90}} size="large" source={{uri: u.poster}} />
-        <ListItem.Content>
-          <ListItem.Title>{u.name}</ListItem.Title>
-          <ListItem.Subtitle>Temporadas: {u.temporadas}</ListItem.Subtitle>
-        </ListItem.Content>
-      </ListItem>
+          <ListItem key={i} bottomDivider>
+            <Avatar
+              containerStyle={{flex: 0.35, height: 90}}
+              size="large"
+              source={{uri: u.poster}}
+            />
+            <ListItem.Content>
+              <ListItem.Title>{u.name}</ListItem.Title>
+              <ListItem.Subtitle>Temporadas: {u.temporadas}</ListItem.Subtitle>
+            </ListItem.Content>
+          </ListItem>
         );
       })}
     </Card>
