@@ -6,37 +6,37 @@ const proximamente = [
   {
     name: 'Breaking Bad',
     type: 'Serie',
-    date: '12-12-12',
+    date: '15-10-21',
     video: 'https://www.youtube.com/embed/VaOt6tXyf2Y',
   },
   {
     name: 'El Camino',
     type: 'Pelicula',
-    date: '12-12-12',
+    date: '16-11-21',
     video: 'https://www.youtube.com/embed/Bi3mMWw_cJ4',
   },
   {
     name: 'Queens Gambit',
     type: 'Serie',
-    date: '12-12-12',
+    date: '10-10-21',
     video: 'https://www.youtube.com/embed/kwrQzTz16w4',
   },
   {
     name: 'The Lighthouse',
     type: 'Pelicula',
-    date: '12-12-12',
+    date: '31-10-21',
     video: 'https://www.youtube.com/embed/Hyag7lR8CPA',
   },
   {
     name: 'Bojack Horseman',
     type: 'Serie',
-    date: '12-12-12',
+    date: '28-2-22',
     video: 'https://www.youtube.com/embed/ZOGxOQxXjdo',
   },
   {
     name: 'The Matrix Resurrections',
     type: 'Pelicula',
-    date: '12-12-12',
+    date: '30-3-22',
     video: 'https://www.youtube.com/embed/9ix7TUGVYIo',
   },
 ];

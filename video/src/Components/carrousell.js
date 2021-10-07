@@ -41,8 +41,8 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
   },
   ciudad: {
-    width: 250,
-    height: 300,
+    width: 275,
+    height: 360,
     marginRight: 10,
   },
   mejores: {
