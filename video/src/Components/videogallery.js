@@ -1,22 +1,35 @@
 import React from 'react';
 import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
 import {Card, Avatar, ListItem, Chip} from 'react-native-elements';
+import {WebView} from 'react-native-webview';
 
 const VideoGallery = ({nombre, url, tipo, fecha}) => {
-    return (
-      <Card>
-        <Card.Title>{nombre}</Card.Title>
-        <Card.Divider />
-        <Card.Image source={{uri: 'https://cdn.alfabetajuega.com/wp-content/uploads/2020/07/minecraft-nueva-version-780x402.jpeg'}}>
-          <Text>{url}</Text>
-        </Card.Image>
+  return (
+    <Card>
+      <Card.Title>{nombre}</Card.Title>
+      <Card.Divider />
+      <View style={styles.Vista}>
+        <WebView source={{uri: url}} />
+      </View>
+      <View style={styles.Chips}>
         <Chip title={tipo} />
-        <Chip title={'Fecha de estreno: '+fecha} type="outline" />
-      </Card>
-    );
+      </View>
+      <View style={styles.Chips}>
+        <Chip title={'Fecha de estreno: ' + fecha} type="outline" />
+      </View>
+    </Card>
+  );
 };
 
 const styles = StyleSheet.create({
+  Vista: {
+    height: 250,
+    flex: 1,
+    marginBottom: 10,
+  },
+  Chips: {
+    padding: 2,
+  },
   baseText: {
     fontFamily: 'Cochin',
   },
