@@ -1,6 +1,7 @@
 import React from 'react';
 import {ScrollView} from 'react-native';
 import Carrousell from '../Components/carrousell';
+import {Tile} from 'react-native-elements';
 
 const peliculas = [
   {
@@ -119,6 +120,14 @@ export default function Peliculas() {
   return (
     <>
       <ScrollView>
+        <Tile
+          imageSrc={{
+            uri: 'https://www.whats-on-netflix.com/wp-content/uploads/2021/05/biggest-shows-and-movies-of-2021-on-netflix-according-to-the-top-10s-640x360.jpg',
+          }}
+          title="Peliculas Completas y de Calidad"
+          featured
+          caption="Calidad y Cantidad"
+        />
         {genres.map((l, i) => (
           <Carrousell
             key={i}

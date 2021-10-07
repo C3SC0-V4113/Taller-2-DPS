@@ -1,7 +1,7 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
 import {ScrollView} from 'react-native-gesture-handler';
 import List from '../Components/list';
+import {Tile} from 'react-native-elements';
 
 const series = [
   {
@@ -73,10 +73,24 @@ const genres = Array.from(new Set(series.map(s => s.genre)));
 
 export default function Series() {
   return (
-    <ScrollView>
-      {genres.map((l, i) => (
-        <List key={i} titulo={l} arreglo={series.filter(a => a.genre === l)} />
-      ))}
-    </ScrollView>
+    <>
+      <ScrollView>
+        <Tile
+          imageSrc={{
+            uri: 'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/mejores-series-netflix-2021-estrenos-1629987720.jpg?crop=0.992xw:0.941xh;0.00327xw,0.00621xh&resize=1200:*',
+          }}
+          title="Series para Disfrutar por Horas"
+          featured
+          caption="Temporadas Completas"
+        />
+        {genres.map((l, i) => (
+          <List
+            key={i}
+            titulo={l}
+            arreglo={series.filter(a => a.genre === l)}
+          />
+        ))}
+      </ScrollView>
+    </>
   );
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
+import {StyleSheet} from 'react-native';
 import {Card, Avatar, ListItem} from 'react-native-elements';
 
 const List = ({titulo, arreglo}) => {

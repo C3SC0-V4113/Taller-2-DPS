@@ -1,6 +1,6 @@
 import React from 'react';
-import {View, Text, Image, ScrollView, StyleSheet} from 'react-native';
-import {Card, Avatar, ListItem, Chip} from 'react-native-elements';
+import {View, StyleSheet} from 'react-native';
+import {Card, Chip} from 'react-native-elements';
 import {WebView} from 'react-native-webview';
 
 const VideoGallery = ({nombre, url, tipo, fecha}) => {

@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, StyleSheet, ScrollView} from 'react-native';
+import {ScrollView} from 'react-native';
 import VideoGallery from '../Components/videogallery';
 
 const proximamente = [
